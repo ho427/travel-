@@ -1,1 +1,141 @@
-<H1> 智慧導覽</H1>
+<H1> 智慧導覽</H1><!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI 智慧旅遊平台</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            background-color: #f8f9fa;
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1518932231313-f83491696280?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .glass-effect {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-teal-600">
+                <i class="fas fa-route mr-2"></i>AI Trip Planner
+            </a>
+            <div class="hidden md:flex items-center space-x-6">
+                <a href="#features" class="text-gray-600 hover:text-teal-600">核心功能</a>
+                <a href="#planner" class="text-gray-600 hover:text-teal-600">開始規劃</a>
+                <a href="#reviews" class="text-gray-600 hover:text-teal-600">用戶評價</a>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-gray-600 hover:text-teal-600"><i class="fas fa-language text-xl"></i></button>
+                <button class="bg-teal-500 text-white px-4 py-2 rounded-full hover:bg-teal-600 transition duration-300">註冊 / 登入</button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white h-[60vh] flex items-center justify-center">
+        <div class="text-center">
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 leading-tight">智慧旅遊，一鍵規劃</h1>
+            <p class="text-lg md:text-xl mb-8 max-w-2xl mx-auto">輸入您的需求，讓 AI 為您打造完美客製化旅程</p>
+            <a href="#planner" class="bg-teal-500 text-white px-8 py-4 rounded-full text-lg font-semibold hover:bg-teal-600 transition duration-300 transform hover:scale-105">
+                立即開始 <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Recently Viewed Section (Personalized) -->
+    <section class="container mx-auto px-6 py-12">
+        <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">您最近瀏覽的地區</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Example Card -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1575824898319-3c36c7a523a7?q=80&w=2070&auto=format&fit=crop" alt="Taipei" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-xl mb-2">繁華都市 - 台北</h3>
+                    <p class="text-gray-600 text-sm">探索 101、故宮與夜市美食。</p>
+                </div>
+            </div>
+             <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1596280962639-6882a8f8e8e4?q=80&w=2070&auto=format&fit=crop" alt="Taichung" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-xl mb-2">藝文之都 - 台中</h3>
+                    <p class="text-gray-600 text-sm">漫步歌劇院，品味特色咖啡。</p>
+                </div>
+            </div>
+             <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300">
+                <img src="https://images.unsplash.com/photo-1620050878544-a0c3a8a3a0c7?q=80&w=2070&auto=format&fit=crop" alt="Hualien" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="font-bold text-xl mb-2">壯麗山海 - 花蓮</h3>
+                    <p class="text-gray-600 text-sm">感受太魯閣的鬼斧神工。</p>
+                </div>
+            </div>
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden transform hover:-translate-y-2 transition duration-300 flex items-center justify-center border-2 border-dashed">
+                 <button class="text-gray-500 hover:text-teal-600">
+                    <i class="fas fa-plus-circle text-4xl"></i>
+                    <p class="mt-2">新增地區</p>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Planner Section -->
+    <section id="planner" class="bg-white py-16">
+        <div class="container mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">AI 智能規劃工具</h2>
+            <p class="text-center text-gray-600 mb-10">只需三步驟，輕鬆獲得您的專屬行程</p>
+            <div class="max-w-4xl mx-auto glass-effect p-8 rounded-2xl shadow-2xl bg-teal-600/80 text-white">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-end">
+                    <!-- Step 1: Destination -->
+                    <div>
+                        <label class="block mb-2 font-semibold"><i class="fas fa-map-marker-alt mr-2"></i>目的地</label>
+                        <input type="text" placeholder="例如：台南、宜蘭" class="w-full p-3 rounded-lg bg-white/20 placeholder-white/70 border-0 focus:ring-2 focus:ring-teal-300">
+                    </div>
+                    <!-- Step 2: Duration -->
+                    <div>
+                        <label class="block mb-2 font-semibold"><i class="fas fa-calendar-alt mr-2"></i>旅遊天數</label>
+                        <select class="w-full p-3 rounded-lg bg-white/20 border-0 focus:ring-2 focus:ring-teal-300 appearance-none text-white">
+                            <option>1 天</option>
+                            <option selected>3 天</option>
+                            <option>5 天</option>
+                            <option>7 天以上</option>
+                        </select>
+                    </div>
+                    <!-- Step 3: Preferences -->
+                    <div>
+                        <label class="block mb-2 font-semibold"><i class="fas fa-sliders-h mr-2"></i>更多偏好</label>
+                        <button class="w-full p-3 rounded-lg bg-white/20 hover:bg-white/30 transition">
+                            交通、住宿、預算...
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-8 text-center">
+                    <button class="bg-white text-teal-600 px-10 py-4 rounded-full text-lg font-bold hover:bg-gray-100 transition duration-300 transform hover:scale-105 shadow-lg">
+                        <i class="fas fa-magic mr-2"></i>AI 生成行程
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Floating AI Chat Button -->
+    <button class="fixed bottom-6 right-6 bg-teal-500 text-white w-16 h-16 rounded-full shadow-lg flex items-center justify-center hover:bg-teal-600 transition transform hover:scale-110">
+        <i class="fas fa-comment-dots text-2xl"></i>
+    </button>
+
+</body>
+</html>
